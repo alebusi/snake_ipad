@@ -41,7 +41,7 @@
       snakeLength += 2;
     }
 
-    context.fillStyle = black; //'#002b36';
+    context.fillStyle = '#002b36';
     context.fillRect(0, 0, SIZE, SIZE); // Reset the play area
     if (end) {
       context.fillStyle = '#eee8d5';
@@ -58,7 +58,7 @@
       end = true;
     }
 
-    context.fillStyle = green; //'#268bd2';
+    context.fillStyle = '#268bd2';
     var snakeObj = {};
     for (var i = 0; i < snake.length; i++) {
       var a = snake[i];
@@ -74,7 +74,7 @@
       candy = {x: randomOffset(), y: randomOffset()};
     }
 
-    context.fillStyle = red; //'#b58900';
+    context.fillStyle = '#b58900';
     context.fillRect(candy.x, candy.y, GRID_SIZE, GRID_SIZE); // Paint the candy
   }
 
