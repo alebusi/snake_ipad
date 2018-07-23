@@ -1,5 +1,5 @@
 (function() {
-  var SIZE = 500; // Size of the play-field in pixels
+  var SIZE = 1000; // Size of the play-field in pixels
   var GRID_SIZE = SIZE / 50;
   var c = document.getElementById('c');
   c.height = c.width = SIZE * 2; // 2x our resolution so retina screens look good
@@ -41,7 +41,7 @@
       snakeLength += 2;
     }
 
-    context.fillStyle = '#e1e1e1';
+    context.fillStyle = '#c2efff';
     context.fillRect(0, 0, SIZE, SIZE); // Reset the play area
     if (end) {
       context.fillStyle = '#eee8d5';
