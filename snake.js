@@ -58,7 +58,7 @@
       end = true;
     }
 
-    context.fillStyle = '#268bd2';
+    context.fillStyle = red; //'#268bd2';
     var snakeObj = {};
     for (var i = 0; i < snake.length; i++) {
       var a = snake[i];
