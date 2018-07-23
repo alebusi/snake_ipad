@@ -38,7 +38,7 @@
     // Did we eat a candy? Detect if our head is in the same cell as the candy
     if (candy && candy.x === newHead.x && candy.y === newHead.y) {
       candy = null;
-      snakeLength += 20;
+      snakeLength += 1;
     }
 
     context.fillStyle = '#002b36';
