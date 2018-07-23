@@ -1,5 +1,5 @@
 (function() {
-  var SIZE = 600; // Size of the play-field in pixels
+  var SIZE = 500; // Size of the play-field in pixels
   var GRID_SIZE = SIZE / 50;
   var c = document.getElementById('c');
   c.height = c.width = SIZE * 2; // 2x our resolution so retina screens look good
@@ -38,7 +38,7 @@
     // Did we eat a candy? Detect if our head is in the same cell as the candy
     if (candy && candy.x === newHead.x && candy.y === newHead.y) {
       candy = null;
-      snakeLength += 1;
+      snakeLength += 2;
     }
 
     context.fillStyle = '#002b36';
