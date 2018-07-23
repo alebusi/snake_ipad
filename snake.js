@@ -41,7 +41,7 @@
       snakeLength += 2;
     }
 
-    context.fillStyle = white; //'#002b36';
+    context.fillStyle = black; //'#002b36';
     context.fillRect(0, 0, SIZE, SIZE); // Reset the play area
     if (end) {
       context.fillStyle = '#eee8d5';
@@ -58,7 +58,7 @@
       end = true;
     }
 
-    context.fillStyle = black; //'#268bd2';
+    context.fillStyle = green; //'#268bd2';
     var snakeObj = {};
     for (var i = 0; i < snake.length; i++) {
       var a = snake[i];
