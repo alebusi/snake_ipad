@@ -12,7 +12,6 @@
   var snake = [{x: SIZE / 2, y: SIZE / 2}]; // Snake starts in the center
   var candy = null;
   var end = false;
-  var success = new Audio('success.wav');
 
   function randomOffset() {
     return Math.floor(Math.random() * SIZE / GRID_SIZE) * GRID_SIZE;
@@ -24,6 +23,7 @@
 
   function tick() {
     var newHead = {x: snake[0].x, y: snake[0].y};
+    var success = new Audio('success.wav');
 
     // Only change directon if the new direction is a different axis
     if (Math.abs(direction) !== Math.abs(newDirection)) {
