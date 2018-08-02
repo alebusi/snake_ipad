@@ -23,8 +23,7 @@
 
   function tick() {
     var newHead = {x: snake[0].x, y: snake[0].y};
-    var success = new Audio('success.wav');
-
+    
     // Only change directon if the new direction is a different axis
     if (Math.abs(direction) !== Math.abs(newDirection)) {
       direction = newDirection;
@@ -39,6 +38,7 @@
     // Did we eat a candy? Detect if our head is in the same cell as the candy
     if (candy && candy.x === newHead.x && candy.y === newHead.y) {
       candy = null;
+      var success = new Audio('success.wav');
       success.play();
       snakeLength += 2;
     }
