@@ -41,7 +41,7 @@
       snakeLength += 2;
     }
 
-    context.fillStyle = '#c2efff';
+    context.fillStyle = '#ffbf18';
     context.fillRect(0, 0, SIZE, SIZE); // Reset the play area
     if (end) {
       context.fillStyle = '#eee8d5';
