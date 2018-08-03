@@ -81,7 +81,7 @@
   }
 
   window.onload = function() {
-    setInterval(tick, 200); // Kick off the game loop!
+    setInterval(tick, 150); // Kick off the game loop!
     window.onkeydown = function(e) {
       newDirection = {37: -1, 38: -2, 39: 1, 40: 2}[e.keyCode] || newDirection;
     };
