@@ -57,6 +57,8 @@
 
     // Detect wall collisions
     if (newHead.x < 0 || newHead.x >= SIZE || newHead.y < 0 || newHead.y >= SIZE) {
+      var fail = new Audio('fail.wav');
+      fail.play();
       end = true;
     }
 
