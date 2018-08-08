@@ -1,6 +1,6 @@
 (function() {
   var SIZE = 600; // Size of the play-field in pixels
-  var GRID_SIZE = SIZE / 30;
+  var GRID_SIZE = SIZE / 20;
   var c = document.getElementById('c');
   c.height = c.width = SIZE * 2; // 2x our resolution so retina screens look good
   c.style.width = c.style.height = SIZE + 'px';
