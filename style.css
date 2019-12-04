@@ -1,0 +1,22 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: black;
+    overflow: hidden;
+}
+
+.container {
+    left: 300px;
+    top: 200px;
+    position: absolute;
+    text-align:center;
+    border: solid 10px white;
+    /*
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    */
+ }
+ 
