@@ -13,7 +13,7 @@ html, body {
 .container {
     width: 1201px;
     margin: 150px auto;
-    position: absolute;
+    position: relative;
     text-align:center;
  }
  
