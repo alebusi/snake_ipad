@@ -91,9 +91,8 @@
 })();
 
 function azione(pos) {
-  newDirection = pos || newDirection;
+  newDirection = pos;
 }
-
 function aggiorna() {
     location.reload();
 };
