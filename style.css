@@ -6,6 +6,9 @@ html, body {
     overflow: hidden;
 }
 
+#c {
+    border: solid 10px white;
+    
 .container {
     /*left: 300px;
     top: 200px; */
@@ -13,7 +16,6 @@ html, body {
     margin: 150px auto;
     position: absolute;
     text-align:center;
-    border: solid 10px white;
     /*
     top: 50%;
     left: 50%;
