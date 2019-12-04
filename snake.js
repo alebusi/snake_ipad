@@ -93,3 +93,7 @@
 function azione(pos) {
   newDirection = pos || newDirection;
 }
+
+function aggiorna() {
+    location.reload();
+};
