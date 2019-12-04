@@ -8,7 +8,7 @@
   context.scale(2, 2); // Scale our canvas for retina screens
 
   var direction = newDirection = 1; // -2: up, 2: down, -1: left, 1: right
-  var snakeLength = 5;
+  var snakeLength = 6;
   var snake = [{x: SIZE / 2, y: SIZE / 2}]; // Snake starts in the center
   var candy = null;
   var end = false;
@@ -38,9 +38,9 @@
     // Did we eat a candy? Detect if our head is in the same cell as the candy
     if (candy && candy.x === newHead.x && candy.y === newHead.y) {
       candy = null;
-      var success = new Audio('success.wav');
-      success.play();
-      snakeLength += 2;
+      //var success = new Audio('success.wav');
+      //success.play();
+      snakeLength += 0;
     }
 
     context.fillStyle = '#000000';
@@ -85,7 +85,7 @@
   window.onload = function() {
     setInterval(tick, 180); // Kick off the game loop!
     window.onkeydown = function(e) {
-      newDirection = {37: -1, 38: -2, 39: 1, 40: 2}[e.keyCode] || newDirection;
+      newDirection = {37: -1, 38: -2, 39: 1, 40: 2}[e.keyCode] || newDirection; //-2: up, 2: down, -1: left, 1: right
     };
   };
 })();
