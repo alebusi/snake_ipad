@@ -7,8 +7,10 @@ html, body {
 }
 
 .container {
-    left: 300px;
-    top: 200px;
+    /*left: 300px;
+    top: 200px; */
+    width: 1201px;
+    margin: 150px auto;
     position: absolute;
     text-align:center;
     border: solid 10px white;
