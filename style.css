@@ -11,17 +11,9 @@ html, body {
 }
     
 .container {
-    /*left: 300px;
-    top: 200px; */
     width: 1201px;
     margin: 150px auto;
     position: absolute;
     text-align:center;
-    /*
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    */
  }
  
