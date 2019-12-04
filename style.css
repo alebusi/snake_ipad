@@ -17,6 +17,15 @@ html, body {
     text-align:center;
  }
  
+.refresh {
+    background-color: white;
+    opacity: 0.3;
+    margin-top: 8vw;
+    width: 8vw;
+    height: 8vw;
+    position: fixed;
+}
+
 .up {
     position: fixed;
     width: 40vw;
