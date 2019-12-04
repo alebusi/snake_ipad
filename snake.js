@@ -82,10 +82,6 @@
     context.fillRect(candy.x, candy.y, GRID_SIZE, GRID_SIZE); // Paint the candy
   }
   
-  function azione(pos) {
-    newDirection = pos || newDirection;
-  }
-
   window.onload = function() {
     setInterval(tick, 1000); // Kick off the game loop!
     window.onkeydown = function(e) {
@@ -93,3 +89,7 @@
     };
   };
 })();
+
+function azione(pos) {
+  newDirection = pos || newDirection;
+}
