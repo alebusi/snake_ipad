@@ -32,8 +32,6 @@ html, body {
     height: 40vh;
     top: 0;
     left: 30vw;
-    background-color: white;
-    opacity: 0.3;
 }
 
 .down {
@@ -42,8 +40,6 @@ html, body {
     height: 40vh;
     top: 60vh;
     left: 30vw;
-    background-color: white;
-    opacity: 0.3;
 }
 
 .left {
@@ -52,8 +48,6 @@ html, body {
     height: 60vh;
     top: 20vh;
     left: 0;
-    background-color: white;
-    opacity: 0.3;
 }
 
 .right {
@@ -62,6 +56,4 @@ html, body {
     height: 60vh;
     top: 20vh;
     left: 70vw;
-    background-color: white;
-    opacity: 0.3;
 }
