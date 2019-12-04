@@ -17,3 +17,34 @@ html, body {
     text-align:center;
  }
  
+.up {
+    position: fixed;
+    width: 40vw;
+    height: 40vh;
+    top: 0;
+    left: 30vw;
+}
+
+.down {
+    position: fixed;
+    width: 40vw;
+    height: 40vh;
+    top: 60vh;
+    left: 30vw;
+}
+
+.left {
+    position: fixed;
+    width: 30vw;
+    height: 60vh;
+    top: 20vh;
+    left: 0;
+}
+
+.right {
+    position: fixed;
+    width: 30vw;
+    height: 60vh;
+    top: 20vh;
+    left: 70vw;
+}
