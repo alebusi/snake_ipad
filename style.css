@@ -20,7 +20,8 @@ html, body {
 .refresh {
     background-color: white;
     opacity: 0.3;
-    margin-top: 8vw;
+    top: 8vw;
+    left: 90vw;
     width: 8vw;
     height: 8vw;
     position: fixed;
