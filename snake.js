@@ -18,8 +18,8 @@
     if (position < 70) {
       position = 70;
     }
-    if (position > 630) {
-      position = 630;
+    if (position > 629) {
+      position = 595;
     }
     return position;
   }
