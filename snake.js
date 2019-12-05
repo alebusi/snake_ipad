@@ -15,8 +15,13 @@
 
   function randomOffset() {
     position=Math.floor(Math.random() * SIZE / GRID_SIZE) * GRID_SIZE;
-    newpos=clamp(position, 70, 630);
-    return newpos;
+    if (position < 70) {
+      position = 70;
+    }
+    if (position > 630) {
+      position = 630;
+    }
+    return position;
   }
 
   function stringifyCoord(obj) {
