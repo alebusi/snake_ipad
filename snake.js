@@ -78,7 +78,7 @@
       candy = {x: randomOffset(), y: randomOffset()};
     }
 
-    context.fillStyle = orange;
+    context.fillStyle = 'orange';
     context.fillRect(candy.x, candy.y, GRID_SIZE, GRID_SIZE); // Paint the candy
   }
   
