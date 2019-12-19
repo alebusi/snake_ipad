@@ -15,11 +15,11 @@
 
   function randomOffset() {
     position=Math.floor(Math.random() * SIZE / GRID_SIZE) * GRID_SIZE;
-    if (position < grid_size * 2) {
-      position = grid_size * 2;
+    if (position < GRID_SIZE * 2) {
+      position = GRID_SIZE * 2;
     }
-    if (position > 700 - (grid_size * 2) ) {
-      position = 700 - (grid_size * 2);
+    if (position > 700 - (GRID_SIZE * 2) ) {
+      position = 700 - (GRID_SIZE * 2);
     }
     return position;
   }
