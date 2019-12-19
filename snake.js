@@ -1,6 +1,6 @@
 (function() {
   var SIZE = 700; // Size of the play-field in pixels
-  var GRID_SIZE = SIZE / 15;
+  var GRID_SIZE = SIZE / 14;
   var c = document.getElementById('c');
   c.height = c.width = SIZE * 2; // 2x our resolution so retina screens look good
   c.style.width = c.style.height = SIZE + 'px';
@@ -90,7 +90,7 @@
   }
   
   window.onload = function() {
-    setInterval(tick, 400); // Kick off the game loop!
+    setInterval(tick, 440); // Kick off the game loop!
     window.onkeydown = function(e) {
       newDirection = {37: -1, 38: -2, 39: 1, 40: 2}[e.keyCode] || newDirection; //-2: up, 2: down, -1: left, 1: right
     };
