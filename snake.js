@@ -12,6 +12,7 @@
   var snake = [{x: SIZE / 2, y: SIZE / 2}]; // Snake starts in the center
   var candy = null;
   var end = false;
+  var valoreOpacity = 0;
 
   function randomOffset() {
     position=Math.floor(Math.random() * SIZE / GRID_SIZE) * GRID_SIZE;
@@ -102,12 +103,14 @@ function azione(pos) {
 }
 
 function cambioOpac() {
-  if (document.getElementById("vert").style.opacity == 0) {
-    document.getElementById("vert").style.opacity = 0.3;
+if (valoreOpacity == 0) {
+    valoreOpacity = 0.3;
   }
   else {
-    document.getElementById("vert").style.opacity=0;  
+    valoreOpacity = 0;  
   }
+  document.getElementById("oriz").style.opacity = valoreOpacity;
+  document.getElementById("vert").style.opacity = valoreOpacity;
 }
 
 function aggiorna() {
