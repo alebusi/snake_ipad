@@ -100,6 +100,16 @@
 function azione(pos) {
   newDirection = pos;
 }
+
+function cambioOpac() {
+  if (document.getElementById("vert").style.opacity == 0) {
+    document.getElementById("vert").style.opacity = 0.3;
+  }
+  else {
+    document.getElementById("vert").style.opacity=0;  
+  }
+}
+
 function aggiorna() {
     location.reload();
 };
