@@ -20,25 +20,28 @@ html, body {
     transform: translate(-50%, -50%);
  }
 
-.inizia {
-    background-color: white;
-    opacity: 0.3;
-    top: 46vw;
-    left: 90vw;
-    width: 8vw;
-    height: 8vw;
-    position: fixed;
-}
-
-
 .refresh {
     background-color: white;
     opacity: 0.3;
-    top: 8vw;
-    left: 90vw;
-    width: 8vw;
-    height: 8vw;
+    top: 6vh;
+    left: 88vw;
+    width: 6vw;
+    height: 6vw;
     position: fixed;
+}
+
+.inizia {
+    background-color: white;
+    opacity: 0.3;
+    top: 86vh;
+    left: 88vw;
+    width: 6vw;
+    height: 6vw;
+    position: fixed;
+}
+
+.up,.down,.left,.right {
+    border: solid 1px white;
 }
 
 .up {
