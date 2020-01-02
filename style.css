@@ -19,7 +19,18 @@ html, body {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
  }
- 
+
+.inizia {
+    background-color: white;
+    opacity: 0.3;
+    top: 46vw;
+    left: 90vw;
+    width: 8vw;
+    height: 8vw;
+    position: fixed;
+}
+
+
 .refresh {
     background-color: white;
     opacity: 0.3;
