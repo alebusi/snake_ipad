@@ -40,10 +40,6 @@ html, body {
     position: fixed;
 }
 
-.up,.down,.left,.right {
-    border: solid 1px white;
-}
-
 .up {
     position: fixed;
     width: 40vw;
