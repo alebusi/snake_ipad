@@ -89,12 +89,21 @@
     context.fillRect(candy.x, candy.y, GRID_SIZE, GRID_SIZE); // Paint the candy
   }
   /* window.onload = function() { */
-    document.getElementById("start").onclick = function () { 
+  document.getElementById("start").onclick = function () { 
     setInterval(tick, 440); // Kick off the game loop!
     window.onkeydown = function(e) {
       newDirection = {37: -1, 38: -2, 39: 1, 40: 2}[e.keyCode] || newDirection; //-2: up, 2: down, -1: left, 1: right
     };
   };
+  window.onkeydown = function(event) {
+    if (event == 32) {
+       setInterval(tick, 440); // Kick off the game loop!
+       window.onkeydown = function(e) {
+         newDirection = {37: -1, 38: -2, 39: 1, 40: 2}[e.keyCode] || newDirection; //-2: up, 2: down, -1: left, 1: right
+       };
+    }
+  };
+
 })();
 
 function azione(pos) {
