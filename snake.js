@@ -93,15 +93,21 @@
     setInterval(tick, 440); // Kick off the game loop!
     window.onkeydown = function(e) {
       newDirection = {37: -1, 38: -2, 39: 1, 40: 2}[e.keyCode] || newDirection; //-2: up, 2: down, -1: left, 1: right
+     /* if (e.keycode == 83) {
+        cambioOpac();
+      } */
     };
   };
-  window.onkeydown = function(event) {
+  window.onkeypress = function (event) {
     if (event.keycode == 32) {
-       setInterval(tick, 440); // Kick off the game loop!
-       window.onkeydown = function(e) {
-         newDirection = {37: -1, 38: -2, 39: 1, 40: 2}[e.keyCode] || newDirection; //-2: up, 2: down, -1: left, 1: right
-       };
-    }
+      setInterval(tick, 440); // Kick off the game loop!
+      window.onkeydown = function(e) {
+        newDirection = {37: -1, 38: -2, 39: 1, 40: 2}[e.keyCode] || newDirection; //-2: up, 2: down, -1: left, 1: right
+     /* if (e.keycode == 83) {
+        cambioOpac();
+      } */
+      };
+    };
   };
 
 })();
