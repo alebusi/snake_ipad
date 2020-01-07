@@ -56,6 +56,7 @@
       context.font = '40px serif';
       context.textAlign = 'center';
       context.fillText('Refresh to play again', SIZE / 2, SIZE / 2);
+      clearInterval(myVar);
     } else {
       snake.unshift(newHead); // Add the new head to the front
       snake = snake.slice(0, snakeLength); // Enforce the snake's max length
@@ -102,7 +103,12 @@ function testbarraSpaz(e) {
 }
 
 function lanciaGioco() {
-   setInterval(tick, 440); // Kick off the game loop!
+   direction = newDirection = 1; // -2: up, 2: down, -1: left, 1: right
+   snakeLength = 1;
+   snake = [{x: SIZE / 2, y: SIZE / 2}]; // Snake starts in the center
+   candy = null;
+   end = false;
+   myVar=setInterval(tick, 440); // Kick off the game loop!
      window.onkeydown = function(e) {
        newDirection = {37: -1, 38: -2, 39: 1, 40: 2}[e.keyCode] || newDirection; //-2: up, 2: down, -1: left, 1: right
    };
