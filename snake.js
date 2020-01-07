@@ -1,4 +1,3 @@
-(function() {
   var SIZE = 700; // Size of the play-field in pixels
   var GRID_SIZE = SIZE / 14;
   var c = document.getElementById('c');
@@ -88,25 +87,33 @@
     context.fillStyle = 'orange';
     context.fillRect(candy.x, candy.y, GRID_SIZE, GRID_SIZE); // Paint the candy
   }
-   // window.onload = function() {
-   // document.getElementById("start").onclick = function () {
-  window.addEventListener("keydown", function (event) {
-    if (event.keycode == 32) {
-      setInterval(tick, 440); // Kick off the game loop!
+  /* window.onload = function() {   
+  document.getElementById("start").onclick = function () { 
+    setInterval(tick, 440); // Kick off the game loop!
+    window.onkeydown = function(e) {
+      newDirection = {37: -1, 38: -2, 39: 1, 40: 2}[e.keyCode] || newDirection; //-2: up, 2: down, -1: left, 1: right
+    };
+  };*/
+  
+function testbarraSpaz(e) {
+    if (e.keyCode == 32) {
+          lanciaGioco();
     }
-    else {
-    //window.onkeydown = function(e) {
-      newDirection = {37: -1, 38: -2, 39: 1, 40: 2}[event.keyCode] || newDirection; //-2: up, 2: down, -1: left, 1: right
-    } 
-  };
-})();
+}
+
+function lanciaGioco() {
+   setInterval(tick, 440); // Kick off the game loop!
+     window.onkeydown = function(e) {
+       newDirection = {37: -1, 38: -2, 39: 1, 40: 2}[e.keyCode] || newDirection; //-2: up, 2: down, -1: left, 1: right
+   };
+}
 
 function azione(pos) {
   newDirection = pos;
 }
 
 function cambioOpac() {
-if (document.getElementById("oriz").style.opacity == 0) {
+if (document.getElementById("oriz").style.opacity === 0) {
     document.getElementById("oriz").style.opacity = 0.3;
     document.getElementById("vert").style.opacity = 0.3;
    }
@@ -117,5 +124,5 @@ if (document.getElementById("oriz").style.opacity == 0) {
 }
 
 function aggiorna() {
-    location.reload();
-};
+    window.location.reload();
+}
