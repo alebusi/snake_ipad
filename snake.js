@@ -93,12 +93,10 @@
   window.onkeydown = function(e) {
     if (e.keycode == 32) {
       setInterval(tick, 440); // Kick off the game loop!
-    else
+    }
+    else {
     //window.onkeydown = function(e) {
       newDirection = {37: -1, 38: -2, 39: 1, 40: 2}[e.keyCode] || newDirection; //-2: up, 2: down, -1: left, 1: right
-      /* if (e.keycode == 83) {
-        cambioOpac();
-      } */
     } 
   };
 })();
