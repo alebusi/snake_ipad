@@ -122,11 +122,11 @@ function azione(pos) {
 
 function cambioOpac() {
   if (document.getElementById("oriz").style.opacity === 0) {
-      document.getElementById("oriz").style.opacity = 0.3;
-      document.getElementById("vert").style.opacity = 0.3;
+      document.getElementById("oriz").style.opacity = "0.3";
+      document.getElementById("vert").style.opacity = "0.3";
   } else {
-      document.getElementById("oriz").style.opacity = 0;
-      document.getElementById("vert").style.opacity = 0;
+      document.getElementById("oriz").style.opacity = "0";
+      document.getElementById("vert").style.opacity = "0";
   }
 }
 
