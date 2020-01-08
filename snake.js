@@ -99,6 +99,8 @@
 function testbarraSpaz(e) {
     if (e.keyCode == 32) {
           lanciaGioco();
+    } else if (e.keyCode == 83) {
+          cambioOpac();
     }
 }
 
