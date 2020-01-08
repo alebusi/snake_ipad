@@ -105,6 +105,7 @@ function testbarraSpaz(e) {
 }
 
 function lanciaGioco() {
+   clearInterval(myVar);
    direction = newDirection = 1; // -2: up, 2: down, -1: left, 1: right
    snakeLength = 1;
    snake = [{x: SIZE / 2, y: SIZE / 2}]; // Snake starts in the center
@@ -121,14 +122,13 @@ function azione(pos) {
 }
 
 function cambioOpac() {
-if (document.getElementById("oriz").style.opacity === 0) {
-    document.getElementById("oriz").style.opacity = 0.3;
-    document.getElementById("vert").style.opacity = 0.3;
-   }
-   else {
-    document.getElementById("oriz").style.opacity = 0;
-    document.getElementById("vert").style.opacity = 0;
-   }
+  if (document.getElementById("oriz").style.opacity === 0) {
+      document.getElementById("oriz").style.opacity = 0.3;
+      document.getElementById("vert").style.opacity = 0.3;
+  } else {
+      document.getElementById("oriz").style.opacity = 0;
+      document.getElementById("vert").style.opacity = 0;
+  }
 }
 
 function aggiorna() {
