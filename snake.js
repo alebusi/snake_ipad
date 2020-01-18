@@ -136,11 +136,12 @@ function cambioDirezione() {
 }
 
 function invertiSenso() {
-  document.getElementById("inverti").className="antiorario";
   if (val > 0) {
+    document.getElementById("inverti").className="antiorario";
     val = -1;
   }
   else {
+    document.getElementById("inverti").className="orario";
     val=1;
   }
 }
