@@ -136,8 +136,7 @@ function cambioDirezione() {
 }
 
 function invertiSenso() {
-  document.getElementById("inverti").class="antiorario";
-  var axis = Math.abs(direction) === 1 ? 'x' : 'y'; // 1, -1 are X; 2, -2 are Y
+  document.getElementById("inverti").className="antiorario";
   if (val > 0) {
     val = -1;
   }
