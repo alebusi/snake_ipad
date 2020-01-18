@@ -124,7 +124,7 @@ function azione(pos) {
   newDirection = pos;
 }
 
-function cambioDirezione(val) {
+function cambioDirezione() {
   num+=val;
   if (num > 3) {
     num = 0;
@@ -137,7 +137,13 @@ function cambioDirezione(val) {
 
 function invertiSenso() {
   document.getElementById("inverti").class="antiorario";
-  val=-1;
+  var axis = Math.abs(direction) === 1 ? 'x' : 'y'; // 1, -1 are X; 2, -2 are Y
+  if (val > 0) {
+    val = -1;
+  }
+  else {
+    val=1;
+  }
 }
 
 function cambioOpac() {
