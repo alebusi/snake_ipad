@@ -12,6 +12,9 @@
   var candy = null;
   var end = false;
   var opac = true;
+  var dir = [1,2,-1,-2];
+  var num = 0;
+  var val = 1;
   
   function randomOffset() {
     position=Math.floor(Math.random() * SIZE / GRID_SIZE) * GRID_SIZE;
@@ -119,6 +122,22 @@ function lanciaGioco() {
 
 function azione(pos) {
   newDirection = pos;
+}
+
+function cambioDirezione(val) {
+  num+=val;
+  if (num > 3) {
+    num = 0;
+  }
+  if (num < 0) {
+    num = 3;
+  }
+  azione(dir[num]);
+}
+
+function invertiSenso() {
+  document.getElementById("inverti").class="antiorario";
+  val=-1;
 }
 
 function cambioOpac() {
