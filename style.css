@@ -20,16 +20,6 @@ html, body {
     transform: translate(-50%, -50%);
  }
 
-.refresh {
-    background-color: white;
-    opacity: 0.3;
-    top: 6vh;
-    left: 88vw;
-    width: 6vw;
-    height: 6vw;
-    position: fixed;
-}
-
 .inizia {
     background-color: white;
     opacity: 0.3;
@@ -40,36 +30,33 @@ html, body {
     position: fixed;
 }
 
-.up {
+.direzione {
     position: fixed;
-    width: 40vw;
-    height: 40vh;
-    top: 0;
-    left: 30vw;
+    width: 99vw;
+    height: 99vh;
 }
 
-.down {
+#inverti {
+    opacity: 0.3;
+    top: 84vh;
+    left: 6vw;
+    width: 0;
+    height: 0;
     position: fixed;
-    width: 40vw;
-    height: 40vh;
-    top: 60vh;
-    left: 30vw;
 }
 
-.left {
-    position: fixed;
-    width: 30vw;
-    height: 60vh;
-    top: 20vh;
-    left: 0;
+.orario {
+    border-right: 3vw solid white;
+    border-top: 3vw solid white;
+    border-left: 3vw solid transparent;
+    border-bottom: 3vw solid transparent;
 }
 
-.right {
-    position: fixed;
-    width: 30vw;
-    height: 60vh;
-    top: 20vh;
-    left: 70vw;
+.antiorario {
+    border-right: 3vw solid transparent;
+    border-top: 3vw solid transparent;
+    border-left: 3vw solid white;
+    border-bottom: 3vw solid white;
 }
 
 .orizzontale {
