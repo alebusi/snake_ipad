@@ -60,7 +60,7 @@
       context.fillStyle = '#eee8d5';
       context.font = '40px serif';
       context.textAlign = 'center';
-      context.fillText('Refresh to play again', SIZE / 2, SIZE / 2);
+      context.fillText('Tap to play again', SIZE / 2, SIZE / 2);
       clearInterval(myVar);
       start = 0;
     } else {
