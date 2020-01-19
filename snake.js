@@ -112,6 +112,7 @@ function testbarraSpaz(e) {
 
 function lanciaGioco() {
    direction = newDirection = 1; // -2: up, 2: down, -1: left, 1: right
+   num = 0;
    snakeLength = 1;
    snake = [{x: SIZE / 2, y: SIZE / 2}]; // Snake starts in the center
    candy = null;
