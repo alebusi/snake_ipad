@@ -15,6 +15,7 @@
   var dir = [1,2,-1,-2];
   var num = 0;
   var val = 1;
+  var start = 0;
   
   function randomOffset() {
     position=Math.floor(Math.random() * SIZE / GRID_SIZE) * GRID_SIZE;
@@ -61,6 +62,7 @@
       context.textAlign = 'center';
       context.fillText('Refresh to play again', SIZE / 2, SIZE / 2);
       clearInterval(myVar);
+      start = 0;
     } else {
       snake.unshift(newHead); // Add the new head to the front
       snake = snake.slice(0, snakeLength); // Enforce the snake's max length
@@ -125,14 +127,20 @@ function azione(pos) {
 }
 
 function cambioDirezione() {
-  num+=val;
-  if (num > 3) {
-    num = 0;
+  if (start === 0) {
+    lanciaGioco();
+    start = 1;
   }
-  if (num < 0) {
-    num = 3;
+  else {
+    num+=val;
+    if (num > 3) {
+      num = 0;
+    }
+    if (num < 0) {
+      num = 3;
+    }
+    azione(dir[num]);    
   }
-  azione(dir[num]);
 }
 
 function invertiSenso() {
