@@ -13,8 +13,8 @@
   var end = false;
   var opac = true;
   var dir = [1,2,-1,-2];
-  var num = 0;
-  var val = 1;
+  var posDir = 0;
+  var valSenso = 1;
   var start = 0;
   
   function randomOffset() {
@@ -112,7 +112,7 @@ function testbarraSpaz(e) {
 
 function lanciaGioco() {
    direction = newDirection = 1; // -2: up, 2: down, -1: left, 1: right
-   num = 0;
+   posDir = 0;
    snakeLength = 1;
    snake = [{x: SIZE / 2, y: SIZE / 2}]; // Snake starts in the center
    candy = null;
@@ -133,25 +133,25 @@ function cambioDirezione() {
     start = 1;
   }
   else {
-    num+=val;
-    if (num > 3) {
-      num = 0;
+    posDir+=valSenso;
+    if (posDir > 3) {
+      posDir = 0;
     }
-    if (num < 0) {
-      num = 3;
+    if (posDir < 0) {
+      posDir = 3;
     }
-    azione(dir[num]);    
+    azione(dir[posDir]);    
   }
 }
 
 function invertiSenso() {
-  if (val > 0) {
+  if (valSenso > 0) {
     document.getElementById("inverti").className="antiorario";
-    val = -1;
+    valSenso = -1;
   }
   else {
     document.getElementById("inverti").className="orario";
-    val=1;
+    valSenso=1;
   }
 }
 
