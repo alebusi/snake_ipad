@@ -38,7 +38,7 @@
     times+=1;
     
     // Only change directon if the new direction is a different axis
-    if (times == 10) {
+    if (times == 11) {
        if (Math.abs(direction) !== Math.abs(newDirection)) {
           direction = newDirection;
        }
