@@ -16,7 +16,7 @@
   var posDir = 0;
   var valSenso = 1;
   var start = 0;
-  var times = 0;
+  var times = -1;
   
   function randomOffset() {
     position=Math.floor(Math.random() * SIZE / GRID_SIZE) * GRID_SIZE;
@@ -36,6 +36,14 @@
   function tick() {
     var newHead = {x: snake[0].x, y: snake[0].y};
     times+=1;
+   
+    // Only change directon if the new direction is a different axis
+    if (times == 10) {
+       if (Math.abs(direction) !== Math.abs(newDirection)) {
+          direction = newDirection;
+       }
+       times=0;
+    }
     
     var axis = Math.abs(direction) === 1 ? 'x' : 'y'; // 1, -1 are X; 2, -2 are Y
     if (direction < 0) {
@@ -91,15 +99,6 @@
 
     context.fillStyle = 'orange';
     context.fillRect(candy.x, candy.y, GRID_SIZE, GRID_SIZE); // Paint the candy
-
-    // Only change directon if the new direction is a different axis
-    if (times == 10) {
-       if (Math.abs(direction) !== Math.abs(newDirection)) {
-          direction = newDirection;
-       }
-       times=0;
-    }
-
   }
   /* window.onload = function() {   
   document.getElementById("start").onclick = function () { 
@@ -124,7 +123,7 @@ function lanciaGioco() {
    snake = [{x: SIZE / 2, y: SIZE / 2}]; // Snake starts in the center
    candy = null;
    end = false;
-   myVar=setInterval(tick, 44); // Kick off the game loop!
+   myVar=setInterval(tick, 30); // Kick off the game loop!
      window.onkeydown = function(e) {
        newDirection = {37: -1, 38: -2, 39: 1, 40: 2}[e.keyCode] || newDirection; //-2: up, 2: down, -1: left, 1: right
    };
