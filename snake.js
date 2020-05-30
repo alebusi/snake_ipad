@@ -37,13 +37,6 @@
     var newHead = {x: snake[0].x, y: snake[0].y};
     times+=1;
     
-    // Only change directon if the new direction is a different axis
-    if (times == 10) {
-       if (Math.abs(direction) !== Math.abs(newDirection)) {
-          direction = newDirection;
-       }
-       times=0;
-    }
     var axis = Math.abs(direction) === 1 ? 'x' : 'y'; // 1, -1 are X; 2, -2 are Y
     if (direction < 0) {
       newHead[axis] -= GRID_SIZE/10; // Move left or down
@@ -98,6 +91,15 @@
 
     context.fillStyle = 'orange';
     context.fillRect(candy.x, candy.y, GRID_SIZE, GRID_SIZE); // Paint the candy
+
+    // Only change directon if the new direction is a different axis
+    if (times == 10) {
+       if (Math.abs(direction) !== Math.abs(newDirection)) {
+          direction = newDirection;
+       }
+       times=0;
+    }
+
   }
   /* window.onload = function() {   
   document.getElementById("start").onclick = function () { 
