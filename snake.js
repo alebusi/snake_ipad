@@ -16,7 +16,7 @@
   var posDir = 0;
   var valSenso = 1;
   var start = 0;
-  var times = 1;
+  var times = 0;
   
   function randomOffset() {
     position=Math.floor(Math.random() * SIZE / GRID_SIZE) * GRID_SIZE;
@@ -42,7 +42,7 @@
        if (Math.abs(direction) !== Math.abs(newDirection)) {
           direction = newDirection;
        }
-       times=1;
+       times=0;
     }
     var axis = Math.abs(direction) === 1 ? 'x' : 'y'; // 1, -1 are X; 2, -2 are Y
     if (direction < 0) {
