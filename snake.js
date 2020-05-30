@@ -69,6 +69,7 @@
       context.fillText('Tap to play again', SIZE / 2, SIZE / 2);
       clearInterval(myVar);
       start = 0;
+      times = -1;
     } else {
       snake.unshift(newHead); // Add the new head to the front
       snake = snake.slice(0, snakeLength); // Enforce the snake's max length
