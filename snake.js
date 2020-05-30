@@ -16,6 +16,7 @@
   var posDir = 0;
   var valSenso = 1;
   var start = 0;
+  var times = 0;
   
   function randomOffset() {
     position=Math.floor(Math.random() * SIZE / GRID_SIZE) * GRID_SIZE;
@@ -34,16 +35,20 @@
 
   function tick() {
     var newHead = {x: snake[0].x, y: snake[0].y};
+    times+=1;
     
     // Only change directon if the new direction is a different axis
-    if (Math.abs(direction) !== Math.abs(newDirection)) {
-      direction = newDirection;
+    if (times == 10) {
+       if (Math.abs(direction) !== Math.abs(newDirection)) {
+          direction = newDirection;
+       }
+       times=0;
     }
     var axis = Math.abs(direction) === 1 ? 'x' : 'y'; // 1, -1 are X; 2, -2 are Y
     if (direction < 0) {
-      newHead[axis] -= GRID_SIZE; // Move left or down
+      newHead[axis] -= GRID_SIZE/10; // Move left or down
     } else {
-      newHead[axis] += GRID_SIZE; // Move right or up
+      newHead[axis] += GRID_SIZE/10; // Move right or up
     }
 
     // Did we eat a candy? Detect if our head is in the same cell as the candy
@@ -117,7 +122,7 @@ function lanciaGioco() {
    snake = [{x: SIZE / 2, y: SIZE / 2}]; // Snake starts in the center
    candy = null;
    end = false;
-   myVar=setInterval(tick, 440); // Kick off the game loop!
+   myVar=setInterval(tick, 44); // Kick off the game loop!
      window.onkeydown = function(e) {
        newDirection = {37: -1, 38: -2, 39: 1, 40: 2}[e.keyCode] || newDirection; //-2: up, 2: down, -1: left, 1: right
    };
