@@ -26,13 +26,27 @@ html, body {
     height: 99vh;
 }
 
+#ridimensiona {
+    opacity: 0.3;
+    width: 6vw;
+    height: 6vw;
+    background-color: white;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
 #inverti {
     opacity: 0.3;
-    top: 84vh;
-    left: 6vw;
     width: 0;
     height: 0;
-    position: fixed;
+    position: absolute;
+    top: 85%;
+    left: 15%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .orario {
