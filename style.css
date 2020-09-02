@@ -33,7 +33,7 @@ html, body {
     background-color: white;
     position: absolute;
     top: 15%;
-    left: 15%;
+    left: 10%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -44,7 +44,7 @@ html, body {
     height: 0;
     position: absolute;
     top: 85%;
-    left: 15%;
+    left: 10%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
