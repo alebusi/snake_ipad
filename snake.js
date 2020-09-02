@@ -135,11 +135,11 @@ function azione(pos) {
 }
 
 function cambioDimensione() {
-  if (size == 840) {
-    size = 420;
+  if (SIZE == 840) {
+    SIZE = 420;
   }
   else {
-    size = 840;
+    SIZE = 840;
   }
   GRID_SIZE = SIZE / 12;
   c = document.getElementById('c');
