@@ -134,6 +134,15 @@ function azione(pos) {
   newDirection = pos;
 }
 
+function cambioDimensione() {
+  if (size == 840) {
+    size = 420;
+  }
+  else {
+    size = 840;
+  }
+}
+  
 function cambioDirezione() {
   if (start === 0) {
     lanciaGioco();
