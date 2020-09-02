@@ -141,6 +141,12 @@ function cambioDimensione() {
   else {
     size = 840;
   }
+  GRID_SIZE = SIZE / 12;
+  c = document.getElementById('c');
+  c.height = c.width = SIZE * 2; // 2x our resolution so retina screens look good
+  c.style.width = c.style.height = SIZE + 'px';
+  context = c.getContext('2d');
+  context.scale(2, 2); // Scale our canvas for retina screens
 }
   
 function cambioDirezione() {
